@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/start_server"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center"
+        android:text="打开服务"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <Button
+        android:id="@+id/show_ip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center"
+        android:text="显示IP"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <Button
+        android:id="@+id/bind_server"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="绑定本机服务"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_server"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <Button
+        android:id="@+id/get_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="选文件"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_server"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <Button
+        android:id="@+id/bind_remote_server"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="绑定远程服务"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bind_server"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="扫码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bind_server"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/message_from_client_edit"
+        app:layout_constraintTop_toBottomOf="@+id/bind_remote_server">
+
+        <TextView
+            android:id="@+id/chart_content_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/message_from_client_edit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.9" />
+    </androidx.core.widget.NestedScrollView>
+
+    <EditText
+        android:id="@+id/message_from_client_edit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="客户端输入"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <Button
+        android:id="@+id/sent_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="发送"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/message_from_client_edit"
+        app:layout_constraintRight_toRightOf="@+id/message_from_client_edit"
+        app:layout_constraintTop_toTopOf="@+id/message_from_client_edit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
