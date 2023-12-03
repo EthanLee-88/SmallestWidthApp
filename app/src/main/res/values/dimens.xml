@@ -2,7 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
+    <dimen name="recoder_circle_bg_width">141dp</dimen>
+    <dimen name="recoder_circle_bg_height">141dp</dimen>
     <!-- dp and sp values, must be defind in this file! -->
     <!-- view size,you can add if there is no one -->
     <dimen name="dp_m_60">-60dp</dimen>

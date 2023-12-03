@@ -9,8 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.blues.smallestwidthapp.databinding.FragmentHomeBinding
-import com.blues.smallestwidthapp.ui.socket.PureSocketClientActivity
-import com.blues.smallestwidthapp.ui.socket.SocketClientActivity
+import com.blues.smallestwidthapp.ui.video.audiovideosample.VideoActivity
 
 class HomeFragment : Fragment() {
 
@@ -33,10 +32,11 @@ class HomeFragment : Fragment() {
 
         val textView: TextView = binding.content
         textView.setOnClickListener {
-            startActivity(Intent(activity, SocketClientActivity::class.java))
+            startActivity(Intent(activity, VideoActivity::class.java))
+
         }
         binding.title.setOnClickListener {
-            startActivity(Intent(activity, PureSocketClientActivity::class.java))
+
         }
         return root
     }

@@ -33,6 +33,11 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
@@ -55,5 +60,10 @@ dependencies {
 //    implementation 'com.github.yuzhiqiang1993:zxing:2.2.8'
     implementation 'com.github.HuanTanSheng:EasyPhotos:3.1.5'
     implementation 'com.github.bumptech.glide:glide:4.15.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
+
+    api("com.serenegiant:common:7.9.1") {
+        exclude module: 'support-v4'
+    }
 }
