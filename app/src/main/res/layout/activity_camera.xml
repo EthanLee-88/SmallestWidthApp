@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/pre_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_100"
+        app:layout_constraintDimensionRatio="H,4:3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:layout_marginBottom="@dimen/dp_58"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="预览"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@+id/take_picture" />
+
+    <Button
+        android:id="@+id/take_picture"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_58"
+        android:layout_marginBottom="@dimen/dp_88"
+        android:gravity="center"
+        android:text="拍照"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
